@@ -1,12 +1,15 @@
-<h1>Welcome to Mister Cocktail!</h1>
-<p>Here are all the cocktails </p>
-<ul class="list-group">
-  <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail)%> </li>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Y29ja3RhaWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60)">
+  <h1>Welcome to Mister Cocktail!</h1>
+  <h2>Here are all the cocktails </h2>
+  <button class="btn btn-primary">
+    <%= link_to "New Cocktail", new_cocktail_path %>
+  </button>
+</div>
 
-  <% end %>
-</ul>
-
-<button class="btn btn-primary">
-  <%= link_to "New Cocktail", new_cocktail_path %>
-</button>
+<div class="card">
+  <ul class="list-group">
+    <% @cocktails.each do |cocktail| %>
+      <li> <%= link_to cocktail.name, cocktail_path(cocktail)%> </li>
+    <% end %>
+  </ul>
+</div>
